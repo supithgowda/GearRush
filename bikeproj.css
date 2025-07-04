@@ -1,0 +1,450 @@
+#logo{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  font-weight: 900;
+  border-radius: 20px;
+}
+header{
+  background-color: black;
+  position: sticky;
+}
+body{
+  background-color: black;
+}
+#companyname{
+  font-family:"Protest Guerrilla", sans-serif;
+}
+#home{
+  background-image: url('https://tse2.mm.bing.net/th?id=OIP.vuA9RMqSRziFwM9JsWi5cwHaEK&pid=Api&P=0&h=180');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+
+}
+#home {
+  background: url('https://wallup.net/wp-content/uploads/2019/09/590289-bike-black-wallpaper.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh; /* Adjust as needed */
+  padding: 60px 0;   /* Adjust as needed */
+  color: #fff;       /* Makes text inside section white for readability */
+  border-radius: 0 0 30px 30px; /* Optional: rounded bottom corners */
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: white !important;
+  text-shadow: 1px 1px 8px #000;
+  transform: scale(1.08);
+  transition: all 0.2s;
+}
+.btn-warning:hover, .btn-outline-warning:hover {
+  background: white;
+  color: #232526;
+  box-shadow: 0 2px 8px #e3e2d455;
+}
+#hometexts{
+  font-family:"Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:white;
+  /* font-style: italic; */
+}
+#hometexts {
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 7vw;   /* Adds space from the left edge */
+  max-width: 500px;   /* Keeps text from stretching too wide */
+}
+#hometexts:hover{
+  text-shadow: 2px 4px 16px #232526, 0 2px 8px #c61313
+}
+#headfirst, #headsecond, #headthird {
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+  color: #b82727;
+  /* text-shadow: 2px 4px 16px #232526, 0 2px 8px #FFD700; */
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+#headsecond {
+  color: #c52222;
+  position:relative;
+  /* text-shadow: 2px 4px 16px #232526, 0 2px 8px #00c896; */
+}
+
+#headthird {
+  color: #c12828;
+  /* text-shadow: 2px 4px 16px #232526, 0 2px 8px #00c896; */
+}
+
+#headfourth {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 1.5rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 8px #232526;
+  position: absolute;
+  left:290px;
+  top:479px;
+}
+#start{
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  margin-top: 1.5rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 8px #232526;
+  position: absolute;
+  left:50%;
+  top:80%;
+  border:2px solid black;
+  border-radius: 20px;
+  height:50px;
+  width:180px
+}
+#start:hover{
+  background-color: orangered;
+  font-weight: bolder;
+  box-shadow: #000 0px 20px 30px -10px;
+  transition: all 1s ease;
+}
+.protest-guerrilla-regular {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.card{
+  background-color: black;
+  color:white;
+  font-style: oblique;
+  padding:15px
+}
+#headbiketypes{
+  padding:25px;
+  margin:25px;
+  position:relative;
+  left: 40%;
+  color:white;
+  font-size: 50px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+#biketypes-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+#popular{
+  padding:25px;
+  margin:25px;
+  position:relative;
+  left: 35%;
+  color:white;
+  font-size: 50px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+#popularbikes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+  gap: 24px;
+  justify-items: center;
+  align-items: stretch;
+  margin: 32px 0;
+}
+.list-group-item{
+  background-color: black;
+  color:white;
+}
+.popular-button{
+  background-color: black;
+  color:white;
+  width:100px;
+  font-style: italic;
+  border:1px solid white;
+  border-radius: 10px;
+}
+.popular-button:hover{
+  background-color: orangered;
+  font-weight: bolder;
+  box-shadow: #000 0px 20px 30px -10px;
+  transition: all 1s ease;
+}
+#popularbikes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row on large screens */
+  gap: 24px;
+  justify-items: center;
+  align-items: stretch;
+  margin: 32px 0;
+}
+
+@media (max-width: 1200px) {
+  #popularbikes-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+  }
+}
+@media (max-width: 900px) {
+  #popularbikes-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+@media (max-width: 600px) {
+  #popularbikes-container {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+  #popular {
+    font-size: 2rem;
+    left: 0;
+    text-align: center;
+    position: static;
+  }
+}
+#table{
+  width:60%;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 30px;
+  font-family: "Protest Guerrilla", sans-serif;
+  background-color: black;
+}
+td {
+  font-style: oblique;
+  font-size: 20px;
+}
+#headprice{
+  padding:25px;
+  margin:25px;
+  position:relative;
+  left: 39%;
+  color:white;
+  font-size: 50px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+.card:hover{
+   border:1.5px solid white;
+   border-radius:40px
+}
+#rent-form{
+  background-image: url('https://cdn.pixabay.com/photo/2017/07/31/22/27/black-2561621_1280.jpg');
+  background-size: cover;
+  min-height: 100vh; /* Adjust as needed */
+  padding: 60px 0;   /* Adjust as needed */
+  color: #fff;   
+  padding-top: 60px  /* Makes text inside section white for readability */
+  /* border-radius: 0 0 30px 30px; */
+}
+#rent-formhead{
+  padding:25px;
+  margin:25px;
+  color:white;
+  font-size: 50px;
+  font-family: "Protest Guerrilla", sans-serif;
+  padding-left: 200px;
+}
+#rent-headtwo{
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+  position: relative;
+  left:-19%;
+  width:300px;
+}
+#rent-headone{
+  color: white;
+  position: relative;
+  left:-35%;
+  width:400px;
+}
+#form-data{
+  background-color: rgb(54, 54, 54);
+  color:white;
+  font-style: oblique;
+  padding:15px;
+  border-radius: 20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-form{
+  margin-bottom: 23px;
+  color:white;
+  height: 50px;
+  background-color: rgba(61, 57, 57, 0.2);
+  border: 0.5px solid rgb(53, 53, 53);
+  width:35%;
+  position:relative;
+  left:15%;
+  width:400px;
+}
+#complete-form{
+  background-color: rgba(54, 54, 54,0.2);
+  height:80vh;
+  width:40vw;
+  position:relative;
+  left:30%;
+  border-radius: 20px;
+
+}
+#submit{
+  height:40px;
+  width:170px;
+  position:relative;
+  left:33%;
+  border-radius: 30px;
+  background-color: rgb(250, 67, 0);
+  color:white;
+}
+#rules-card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  justify-content: space-between;
+}
+#terms-head{
+  padding:25px;
+  margin:25px;
+  position:relative;
+  left: 25%;
+  color:white;
+  font-size: 50px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+.card-body{
+  margin-left:30px;
+}
+#aboutus{
+  padding-top: 80px;
+  background-image: url('https://wallpapers.com/images/hd/array-of-black-3d-boxes-lic6pknea4vqlfae.jpg');
+  background-size: cover;
+  height: 70vh; /* Adjust as needed */
+}
+#aboutus-image{
+  position: relative;
+  left: 10%;
+}
+#aboutus-text{
+  position: relative;
+  left:48%;
+  top: -340px;
+  max-width: 600px;/* Keeps text from stretching too wide */
+
+}
+#about-head{
+  color: white;
+  font-size: 50px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+#about-para{
+  color: white;
+  font-size: 17px;
+  font-style: oblique;
+}
+#aboutus:hover{
+  border:1px solid white;
+  border-radius:40px;
+  transition:all 1s ease;
+}
+#table:hover{
+  border:1px solid white;
+  border-radius:40px;
+  transition:all 1s ease;
+}
+#complete-form:hover{
+  border:1px solid white;
+  border-radius:40px;
+  transition:all 1s ease;
+}
+#form-data:hover{
+  border:1px solid white;
+  border-radius:40px;
+  transition:all 1s ease;
+}
+#rental-terms{
+  background-image: url('https://wallpapers.com/images/hd/array-of-black-3d-boxes-lic6pknea4vqlfae.jpg');
+  background-size: cover;
+}
+.terms-card{
+  background-color: rgba(54, 54, 54,0);
+}
+#biketypes{
+  background-image: url('https://wallpapers.com/images/hd/array-of-black-3d-boxes-lic6pknea4vqlfae.jpg');
+  background-size: cover;
+  padding-bottom: 30px;
+}
+.team-memb{
+  border-radius: 200px;
+}
+#ourteam-head{
+  padding:25px;
+  margin:25px;
+  position:relative;
+  left: 40%;
+  color:white;
+  font-size: 50px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+#team-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+.team-memb:hover{
+  border:1px solid white;
+  transition: all 1s ease;
+  box-shadow: 0 12px 18px #e3e2d455;
+}
+#footer-input{
+  width:500px;
+  height:40px
+}
+#footer-button{
+  height:40px;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 900;
+  color: black;
+  
+}
+#myaccount{
+  gap:30px
+}
+#footer-part{
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-style: italic;
+}
+#last-logo{
+  height:100px;
+  width:100px;
+  border-radius: 100px;
+  border:2px solid rgb(7, 7, 7);
+  position: relative;
+  right:40%;
+  bottom: -20%;
+}
+section li:hover{
+  color:white;
+  font-weight: 700;
+}
+#our-team{
+  padding-bottom: 30px;
+}
+.popular-button{
+  text-decoration: none;
+}

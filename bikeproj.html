@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="bikeproj.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- <div id="location">
+      <a href="bangalore📍">bangalore📍</a>
+      <a href="https://maps.app.goo.gl/t63iq3bpdQL8AEwA9">Maps</a> -->
+      
+    <!-- </div> -->
+  <nav class="navbar navbar-expand-lg py-3" style="background: linear-gradient(90deg, #434141 0%, #080707 70%); box-shadow: 0 4px 24px rgba(0,0,0,0.2);">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img id="logo" src="https://tse2.mm.bing.net/th?id=OIP.JArDd1Kyc4Raf4CJEAgkkgHaH_&pid=Api&P=0&h=180"
+             alt="Logo" width="50" height="50"
+             class="d-inline-block align-text-top me-3 rounded-circle border border-3 border-warning shadow"
+             style="object-fit:cover; background:#fff;">
+
+        <span id="companyname" class="fs-2 fw-bold text-uppercase"
+              style="letter-spacing:2px; color:#dc1010; text-shadow: 2px 2px 8px #000;">
+          SpeedX Bikes
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold fs-5" aria-current="page" href="#" style="color:#FFD700;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold fs-5" href="#popular-bikes">Bikes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold fs-5" href="#price-list">Price</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold fs-5" href="#aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold fs-5" href="#rent-form">Contact Us</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold fs-5" href="#aboutus" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              AboutUs
+            </a>
+            <li class="nav-item">
+            <a class="nav-link fw-semibold fs-5" href="#rent-form">Contact Us</a>
+          </li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Company Details</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+        </ul>
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-warning" type="submit">Search</button>
+        </form>
+        <button type="button" class="btn btn-outline-light me-2 px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          style="transition: background 0.3s;">Login</button>
+        <button type="button" class="btn btn-warning px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          style="color:#232526; font-weight:bold; transition: background 0.3s;">Sign-In</button>
+      </div>
+    </div>
+  </nav>
+</header>
+<section id="home">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login Page</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 row">
+  <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+  <div class="col-sm-10">
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+  </div>
+</div>
+<div class="mb-3 row">
+  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+  <div class="col-sm-10">
+    <input type="password" class="form-control" id="inputPassword">
+  </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div><div id="hometexts" class="protest-guerrilla-regular">
+
+<h1 id="headfirst">ENJOY YOUR TEENAGE</h1>
+<h1 id="headsecond">WITH THIS RAW</h1>
+<h1 id="headthird">BEASTS</h1>
+<h4 id="headfourth">~Supith Kumar M</h4></div>
+<!-- <button id="start">Get Started</button> -->
+</section>
+<section id="biketypes">
+<h1 id="headbiketypes">BIKE TYPES</h1>
+<div id="biketypes-container">
+<div class="card" style="width: 18rem;">
+  <img src="https://media.istockphoto.com/id/537445040/photo/motocross-rider-performing-high-jump-at-sunset.jpg?s=2048x2048&w=is&k=20&c=fQ5M4mLqMSknuDSsu9bac0gcYS7RaHCB9L1Ll28NcKo=" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Mountain Bikes</h5>
+    <p class="card-text">This article covers what MTB bikes are, different types, and innovative features that define mountain riding. Join us as we explore the world of mountain bikes</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://wallpaperaccess.com/full/163138.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Sports Bikes</h5>
+    <p class="card-text">This article dives into the thrilling world of sports bikes, highlighting their performance attributes and captivating style. Let’s embark on this exhilarating journey! </p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://wallpapercave.com/wp/wp4366488.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Naked Bikes</h5>
+    <p class="card-text">This article dives into the thrilling world of Naked bikes, highlighting their performance attributes and captivating style. Let’s embark on this exhilarating journey!</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://cdn.pixabay.com/photo/2017/07/31/22/27/black-2561619_1280.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Advance Cycles</h5>
+    <p class="card-text">On a standard bicycle the wheels are mounted in-line in a metal frame, with the front wheel held in a rotatable fork. The rider sits on a saddle and steers by leaning.</p>
+  </div>
+</div>
+</div>
+</section>
+<section id="popular-bikes">
+<h1 id="popular">Most Popular Bikes</h1>
+<div id="popularbikes-container">
+  <div class="card" style="width: 18rem;">
+  <img src="https://wallpapercave.com/wp/wp10977151.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Continental GT 650</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://img1.motorradonline.de/Royal-Enfield-Himalayan-2021-169Gallery-f7fde817-1765359.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Himalayan 450</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://wallpapercave.com/wp/wp4067775.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Duke 390</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="http://getwallpapers.com/wallpaper/full/7/2/5/404615.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Duke 250</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://4kwallpapers.com/images/wallpapers/ducati-panigale-v4-sp-2021-dark-background-3840x2560-3371.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Ducati Panigale V4</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://images.unsplash.com/photo-1661842443336-511d46db2225?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8czEwMDBycnxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BMW S1000rr</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://wallpapercave.com/wp/wp11364830.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Aprilia RSV4 RR</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://www.bossrides.in/wp-content/uploads/2023/03/kawasaki-ninja-zx10r-1-min-scaled-1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Ninja ZX10RR</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://wallpapercave.com/wp/wp2792095.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">KX 450FF</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+     <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://img.indianautosblog.com/2014/10/Kawasaki-Ninja-H2-road-legal-bike-teaser.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Ninja H2R</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://cdn.pixabay.com/photo/2017/07/31/22/27/black-2561620_1280.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BMX Bike</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.bulk of the card's content</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button"><a  style="text-decoration: none" href="#rent-form">Shop Now</a></button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://cdn.pixabay.com/photo/2017/07/31/22/27/black-2561621_1280.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Hybrid Bike</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.bulk of the card's content</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">-3 hours $9.95</li>
+    <li class="list-group-item">-6 hours $12.45</li>
+    <li class="list-group-item">-1 day $14.95</li>
+  </ul>
+  <div class="card-body">
+    <button class="popular-button">Shop Now</button>
+  </div>
+</div></div>
+</section>
+<section id="price-list">
+  <h1 id="headprice">Price-list</h1>
+  <table class="table table-dark table-hover" id="table">
+  <thead>
+    <tr>
+      <th scope="col">Bike Rentals</th>
+      <th scope="col">Hour</th>
+      <th scope="col">Day</th>
+      <th scope="col">Week</th>
+      <th scope="col">Month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Mountain Bikes</th>
+     <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+    </tr>
+    <tr>
+      <th scope="row">Super Bikes</th>
+     <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+    </tr>
+    <tr>
+      <th scope="row">Naked Bikes</th>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+    </tr>
+    <tr>
+      <th scope="row">Bicycles</th>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+    </tr>
+    <tr>
+      <th scope="row">Others</th>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+      <td>$9.95</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<section id="rent-form">
+  <div id="complete-form">
+  <div id="rent-formhead">
+  <h1 id="rent-headone">Want To Rent A Bike?</h1>
+  <h4 id="rent-headtwo">Fill the form and we will get in touch as soon as possible...</h4></div>
+  <div id="form-data">
+    <input type="text" placeholder="Name*" id="name" class="contact-form">
+    <input type="tel" placeholder="phone-Number*" id="number" class="contact-form">
+    <input type="email" placeholder="Email*" id="mail" class="contact-form">
+    <input type="datetime-local" placeholder="Startdate&Time*" id="startdate" class="contact-form">
+    <input type="datetime-local" placeholder="Enddate&Time*" id="enddate" class="contact-form">
+    <button type="submit" value="Submit" id="submit">Book a bike</button>
+  </div></div>
+</section>
+<section id="rental-terms">
+  <h1 id="terms-head">Rental Terms&Conditions</h1>
+  <div id="rules-card">
+    <div class="card terms-card" style="width: 22rem;">
+  <div class="card-body">
+    <h5 class="card-title">Security Deposit</h5>
+    <p class="card-text">We ask a security deposit on all bikes or cycling gear you rent. You can make a payment via a debit or credit card. We cannot return you money until the gear is returned.</p>
+  </div>
+</div>
+<div class="card terms-card" style="width: 22rem;">
+  <div class="card-body">
+    <h5 class="card-title">Age Restrictions</h5>
+    <p class="card-text">If you want to rent a bike, you have to be at least 18 years old. Don't forget to bring your passport or driver’s license. Younger participants need to be accompanied by a parent or guardian.</p>
+  </div>
+</div>
+<div class="card terms-card" style="width: 22rem;">
+  <div class="card-body">
+    <h5 class="card-title">Helmets</h5>
+    <p class="card-text">Additionally, we provide all our clients with mandatory helmets fitted right to your size. Be careful on the road!</p>
+  </div>
+</div>
+<div class="card terms-card" style="width: 22rem;">
+  <div class="card-body">
+    <h5 class="card-title">Damage</h5>
+    <p class="card-text">If you want to rent a bike or any cycling gear, you will be responsible for it until the time of return. The theft and any possible bike damage are included.</p>
+  </div>
+</div>
+<div class="card terms-card" style="width: 22rem;">
+  <div class="card-body">
+    <h5 class="card-title">Riding Rules</h5>
+    <p class="card-text">All the renters have to stick to traffic rules, signs, laws, and regulations during the riding trip. It is advisable not to use smartphones or cameras..</p>
+  </div>
+</div>
+<div class="card terms-card" style="width: 22rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Return our bike or gear at least 15 minutes prior to our closing time to check it out. We usually work till 6pm in spring and 7pm in summer.</p>
+  </div>
+</div>
+  </div>
+</section>
+<section id="aboutus">
+    <img src="https://images.hdqwalls.com/wallpapers/yamaha-r1-concept-qu.jpg" alt="About Us" class="img-fluid" height:"400px" width="500px" id="aboutus-image">
+    <div id="aboutus-text">
+      <h1 id="about-head">About SpeedX Bikes</h1>
+      <p id="about-para">Welcome to SpeedX Bikes, your ultimate destination for high-performance motorcycles and cycling gear. We are passionate about providing you with the best biking experience, whether you're a seasoned rider or just starting out. Our extensive range of bikes includes everything from mountain bikes to sports bikes, ensuring there's something for everyone. At SpeedX Bikes, we prioritize quality, safety, and customer satisfaction above all else. Join us on the road to adventure!whether you're a seasoned rider or just starting out. Our extensive range of bikes includes everything from mountain bikes!</p></div>
+</section>
+<section id="our-team">
+  <h1 id="ourteam-head">Our Team</h1>
+  <div id="team-container">
+    <div class="card" style="width: 19rem;">
+  <img src="https://img.freepik.com/premium-photo/portrait-young-boy-professional-look_785361-73.jpg" class="card-img-top team-memb" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Supith Kumar M</h4>
+    <p class="card-text">Supith is the president and founder of Funny Bikes with over 10 years of expertise in the bicycle business. He is a huge fan of hiking, biking, and skiing ,Bikes as a professional technician..</p>
+    <a href="#" class="btn btn-primary">More info</a>
+  </div>
+</div>
+<div class="card" style="width: 19rem;">
+  <img src="https://r2.erweima.ai/imgcompressed/img/compressed_497a75c0637b108f1458cb3225429852.webp" class="card-img-top team-memb" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Ashwin S</h4>
+    <p class="card-text">With a profound knowledge of bicycle mechanics and a passion for all things outdoors, Andrew was a perfect fit to join Funny Bikes as a professional bike repair technician.</p>
+    <a href="#" class="btn btn-primary">More info</a>
+  </div>
+</div>
+<div class="card" style="width: 19rem;">
+  <img src="https://r2.erweima.ai/imgcompressed/img/compressed_bd04350e7b6b57642107a49ee6a00269.webp" class="card-img-top team-memb" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Jeeva V</h4>
+    <p class="card-text">Jeeva has years of experience of bicycle tour guiding. His passion for biking and exploring new places brought him to Funny Bikes.He is our professional tour guide.</p>
+    <a href="#" class="btn btn-primary">More info</a>
+  </div>
+</div>
+    </div>
+</section>
+<section id="footer-part" class="pt-5 pb-3" style="background:#0d0d0d; color:#ffffff;">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <div class="col-lg-4 col-md-6 footer-data">
+        <h4 class="mb-3">Sign up &amp; get 10% Off</h4>
+        <form class="d-flex mb-2">
+          <input id="footer-input" type="email" class="form-control me-2" placeholder="Email" required>
+          <button id="footer-button" class="btn btn-info text-black px-4" type="submit">Sign up</button>
+        </form>
+        <small class="text-secondary">*New customers only. Offer lasts 30 days. See Terms.</small>
+      </div>
+      <div class="col-lg-2 col-md-6 footer-data" id="myaccount">
+        <h5 class="mb-3">My Account</h5>
+        <ul class="list-unstyled text-secondary">
+          <li>Profile</li>
+          <li>Account</li>
+          <li>Purchases</li>
+          <li>Credits</li>
+          <li>Preferences</li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-2 col-md-6 footer-data">
+        <h5 class="mb-3">Support</h5>
+        <ul class="list-unstyled text-secondary">
+          <li>Contact</li>
+          <li>FAQs</li>
+          <li>Shipping</li>
+          <li>Returns</li>
+          <li>Terms</li>
+          <li>Privacy</li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-2 col-md-6">
+        <h5 class="mb-3">SpeedX Bikes</h5>
+        <ul class="list-unstyled text-secondary">
+          <li>About</li>
+          <li>Publishers</li>
+          <li>Affiliates</li>
+          <li>Vendors</li>
+          <li>Blog</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div class="col-lg-2 d-flex align-items-end justify-content-lg-end justify-content-center">
+        <img id="last-logo" src="https://tse2.mm.bing.net/th?id=OIP.JArDd1Kyc4Raf4CJEAgkkgHaH_&pid=Api&P=0&h=180" alt="BBB Accredited Business" >
+      </div>
+    </div>
+    <hr class="my-4" style="border-color:#444;">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <div class="text-secondary small">Powered By <span style="color:#00bcd4;font-weight:bold;">SpeedX Bikes</span></div>
+      <div class="text-secondary small text-center">Made in India<br>&copy; 2024 SpeedX Bikes. All Rights Reserved.</div>
+    </div>
+  </div>
+</section>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html> 
